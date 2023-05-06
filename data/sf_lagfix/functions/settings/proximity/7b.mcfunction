@@ -1,7 +1,8 @@
-# Init
-scoreboard players set LF.PlayerProximity sf.LagFixer 7
-# Notify
+# Set LagFixer No Clear Proximity to 7 blocks
+## Feedback
+### Sounds 
 playsound minecraft:block.stone_button.click_on master @s ~ ~ ~ .5
-title @s actionbar [{"text": "[","color": "gray"},{"text": "LF","color": "green"},{"text": "] ","color": "gray"},{"text": "Proximity set to ","color": "gold"},{"text": "7 blocks","color": "red"}]
+## Update Scoreboard
+scoreboard players set LF.PlayerProximity LF.Settings1 7
 # Reload menu
-function sf_lagfix:menu
+function sf_lagfix:settings/menu

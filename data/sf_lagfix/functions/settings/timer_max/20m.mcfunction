@@ -1,8 +1,9 @@
-# Init
-scoreboard players set LF.TimerMax sf.LagFixer 1200
-scoreboard players operation LF.TimerCurrent sf.LagFixer = LF.TimerMax sf.LagFixer
-# Notify
+# Set LagFixer clear interval to 20 minutes
+## Feedback
+### Sounds 
 playsound minecraft:block.stone_button.click_on master @s ~ ~ ~ .5
-tellraw @a[tag=!Admin] [{"text": "[","color": "gray"},{"text": "LF","color": "green","hoverEvent": {"action": "show_text","value": [{"text": "[","color": "gray"},{"text": "SF","color": "dark_purple"},{"text": "]","color": "gray"},{"text": "LagFixer","color": "gold"}]}},{"text": "] ","color": "gray"},{"text": "LagFixer interval is now at ","color": "gold"},{"text": "20 minutes","color": "red"},{"text": "!","color": "gold"}]
+## Update Scoreboard
+scoreboard players set LF.TimerMax LF.Settings1 1200
+scoreboard players operation LF.TimerCurrent LF.Settings1 = LF.TimerMax LF.Settings1
 # Reload menu
-function sf_lagfix:menu
+function sf_lagfix:settings/menu

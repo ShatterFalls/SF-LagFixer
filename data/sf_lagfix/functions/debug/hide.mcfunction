@@ -1,9 +1,9 @@
-# Init
-scoreboard players set #Debugger sf.LagFixer 0
+# Debugging Mode OFF
+## Admin Team
 team leave @s[tag=Admin]
+## Disable Dubugger
+scoreboard players set #Debugger SF.LagFixer 0
+## Clear Scoreboards
 scoreboard objectives setdisplay sidebar.team.red
-# Notify
-playsound minecraft:block.stone_button.click_on master @s[tag=Admin] ~ ~ ~ .5
-title @s[tag=Admin] actionbar [{"text": "[","color": "gray"},{"text": "LF","color": "green"},{"text": "] ","color": "gray"},{"text": "Debug menu hidden.","color": "gold"}]
-# Reload menu
+## Reload Menu
 function sf_lagfix:menu
