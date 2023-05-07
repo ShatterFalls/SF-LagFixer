@@ -4,8 +4,8 @@
 team add Admin
 team modify Admin color red
 ### Enitity Collision fix
-team add NoCollide
-team modify NoCollide collisionRule pushOtherTeams
+#team add NoCollide
+#team modify NoCollide collisionRule pushOtherTeams
 ## Scoreboards
 scoreboard objectives add LF.ItemStats dummy
 scoreboard objectives add LF.EntityStats dummy
@@ -43,7 +43,7 @@ scoreboard players add LF.MenuSpacing LF.Display 0
 scoreboard players add LF.TimerMax LF.Settings1 0
 scoreboard players add LF.TimerCurrent LF.Settings1 0
 scoreboard players add LF.PlayerProximity LF.Settings1 0
-scoreboard players add LF.NoCollision LF.Settings1 0
+#scoreboard players add LF.NoCollision LF.Settings1 0
 ### LF.Entities1
 scoreboard players add LF.ArmorStand LF.Entities1 0
 scoreboard players add LF.Arrow LF.Entities1 0

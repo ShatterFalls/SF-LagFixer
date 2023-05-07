@@ -9,7 +9,7 @@ scoreboard players set #Debugger SF.LagFixer 0
 scoreboard players set LF.TimerMax LF.Settings1 1800
 scoreboard players operation LF.TimerCurrent LF.Settings1 = LF.TimerMax LF.Settings1
 scoreboard players set LF.PlayerProximity LF.Settings1 5
-scoreboard players set LF.NoCollision LF.Settings1 1
+#scoreboard players set LF.NoCollision LF.Settings1 1
 ## LF.Entities1
 scoreboard players set LF.ArmorStand LF.Entities1 0
 scoreboard players set LF.Arrow LF.Entities1 1

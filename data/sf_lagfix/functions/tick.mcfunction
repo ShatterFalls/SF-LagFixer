@@ -11,7 +11,7 @@ execute if score LF.TimerCurrent LF.Settings1 matches 3 run title @a actionbar [
 execute if score LF.TimerCurrent LF.Settings1 matches 2 run title @a actionbar [{"text": "[","color": "gray"},{"text": "LF","color": "green"},{"text": "] ","color": "gray"},{"text": "Clear in ","color": "gold"},{"text": "2..","color": "red"}]
 execute if score LF.TimerCurrent LF.Settings1 matches 1 run title @a actionbar [{"text": "[","color": "gray"},{"text": "LF","color": "green"},{"text": "] ","color": "gray"},{"text": "Clear in ","color": "gold"},{"text": "1..","color": "red"}]
 ## Run Clear/Timer reset
-execute if score LF.TimerCurrent LF.Settings1 matches 0 run function sf_lagfix:clear/init
+execute if score LF.TimerCurrent LF.Settings1 matches 0 run function sf_lagfix:clear
 execute if score LF.TimerCurrent LF.Settings1 matches 0 run scoreboard players operation LF.TimerCurrent LF.Settings1 = LF.TimerMax LF.Settings1
 ## Countdown
 scoreboard players remove LF.TimerCurrent LF.Settings1 1

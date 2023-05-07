@@ -6,7 +6,7 @@ execute if score LF.PlayerProximity LF.Settings1 matches 7 at @a run tag @e[type
 execute if score LF.PlayerProximity LF.Settings1 matches 9 at @a run tag @e[type=item,distance=..9] add LF.Pass
 execute if score LF.PlayerProximity LF.Settings1 matches 12 at @a run tag @e[type=item,distance=..12] add LF.Pass
 execute if score LF.PlayerProximity LF.Settings1 matches 15 at @a run tag @e[type=item,distance=..15] add LF.Pass
-## Item Filter
+## Filter
 ### Tools
 tag @e[type=item,nbt={Item:{id:"minecraft:diamond_sword"}}] add LF.Pass
 tag @e[type=item,nbt={Item:{id:"minecraft:diamond_pickaxe"}}] add LF.Pass
@@ -54,20 +54,51 @@ tag @e[type=item,nbt={Item:{id:"minecraft:dragon_head"}}] add LF.Pass
 tag @e[type=item,nbt={Item:{id:"minecraft:player_head"}}] add LF.Pass
 tag @e[type=item,nbt={Item:{id:"minecraft:skeleton_skull"}}] add LF.Pass
 tag @e[type=item,nbt={Item:{id:"minecraft:wither_skeleton_skull"}}] add LF.Pass
-## Clear
-function sf_lagfix:clear/run
+### Entities
+execute if score LF.ArmorStand LF.Entities1 matches 1 run tag @e[type=minecraft:armor_stand,tag=!LF.Pass] add LF.Delete
+execute if score LF.Arrow LF.Entities1 matches 1 run tag @e[type=minecraft:arrow,tag=!LF.Pass] add LF.Delete
+execute if score LF.Boat LF.Entities1 matches 1 run tag @e[type=minecraft:boat,tag=!LF.Pass] add LF.Delete
+execute if score LF.DragonFireball LF.Entities1 matches 1 run tag @e[type=minecraft:dragon_fireball,tag=!LF.Pass] add LF.Delete
+execute if score LF.Egg LF.Entities1 matches 1 run tag @e[type=minecraft:egg,tag=!LF.Pass] add LF.Delete
+execute if score LF.EnderPearl LF.Entities1 matches 1 run tag @e[type=minecraft:ender_pearl,tag=!LF.Pass] add LF.Delete
+execute if score LF.EvokerFangs LF.Entities1 matches 1 run tag @e[type=minecraft:evoker_fangs,tag=!LF.Pass] add LF.Delete
+execute if score LF.ExpBottle LF.Entities1 matches 1 run tag @e[type=minecraft:experience_bottle,tag=!LF.Pass] add LF.Delete
+execute if score LF.ExpOrb LF.Entities1 matches 1 run tag @e[type=minecraft:experience_orb,tag=!LF.Pass] add LF.Delete
+execute if score LF.EyeOfEnder LF.Entities1 matches 1 run tag @e[type=minecraft:eye_of_ender,tag=!LF.Pass] add LF.Delete
+execute if score LF.FallingBlock LF.Entities2 matches 1 run tag @e[type=minecraft:falling_block,tag=!LF.Pass] add LF.Delete
+execute if score LF.Fireballs LF.Entities2 matches 1 run tag @e[type=minecraft:fireball,tag=!LF.Pass] add LF.Delete
+execute if score LF.FireworkRocket LF.Entities2 matches 1 run tag @e[type=minecraft:firework_rocket,tag=!LF.Pass] add LF.Delete
+execute if score LF.HopperMinecart LF.Entities2 matches 1 run tag @e[type=minecraft:hopper_minecart,tag=!LF.Pass] add LF.Delete
+execute if score LF.ItemFrame LF.Entities2 matches 1 run tag @e[type=minecraft:item_frame,tag=!LF.Pass] add LF.Delete
+execute if score LF.LlamaSpit LF.Entities2 matches 1 run tag @e[type=minecraft:llama_spit,tag=!LF.Pass] add LF.Delete
+execute if score LF.Minecart LF.Entities2 matches 1 run tag @e[type=minecraft:minecart,tag=!LF.Pass] add LF.Delete
+execute if score LF.Painting LF.Entities2 matches 1 run tag @e[type=minecraft:painting,tag=!LF.Pass] add LF.Delete
+execute if score LF.Potion LF.Entities2 matches 1 run tag @e[type=minecraft:potion,tag=!LF.Pass] add LF.Delete
+execute if score LF.ShulkerBullet LF.Entities2 matches 1 run tag @e[type=minecraft:shulker_bullet,tag=!LF.Pass] add LF.Delete
+execute if score LF.SmallFireball LF.Entities3 matches 1 run tag @e[type=minecraft:small_fireball,tag=!LF.Pass] add LF.Delete
+execute if score LF.Snowball LF.Entities3 matches 1 run tag @e[type=minecraft:snowball,tag=!LF.Pass] add LF.Delete
+execute if score LF.SpectralArrow LF.Entities3 matches 1 run tag @e[type=minecraft:spectral_arrow,tag=!LF.Pass] add LF.Delete
+execute if score LF.TNT LF.Entities3 matches 1 run tag @e[type=minecraft:tnt,tag=!LF.Pass] add LF.Delete
+execute if score LF.Trident LF.Entities3 matches 1 run tag @e[type=minecraft:trident,tag=!LF.Pass] add LF.Delete
+execute if score LF.WitherSkull LF.Entities3 matches 1 run tag @e[type=minecraft:wither_skull,tag=!LF.Pass] add LF.Delete
+### Remove
+execute store result score LF.ItemsCleared LF.ItemStats run kill @e[type=minecraft:item,tag=!LF.Pass]
+execute store result score LF.EntitiesCleared LF.EntityStats run kill @e[tag=LF.Delete]
 ## Statistic Updater
-### Times/Total/Currently Cleared Updater
+### Times Cleared
 scoreboard players add LF.TimesCleared SF.LagFixer 1
-scoreboard players operation LF.TotalCleared LF.ItemStats += LF.ItemsCleared LF.ItemStats
-scoreboard players operation LF.TotalCleared LF.EntityStats += LF.EntitiesCleared LF.EntityStats
+### This Clear
+scoreboard players set LF.Cleared SF.LagFixer 0
 scoreboard players operation LF.Cleared SF.LagFixer += LF.ItemsCleared LF.ItemStats
 scoreboard players operation LF.Cleared SF.LagFixer += LF.EntitiesCleared LF.EntityStats
+### Total Cleared
+scoreboard players operation LF.TotalCleared LF.ItemStats += LF.ItemsCleared LF.ItemStats
+scoreboard players operation LF.TotalCleared LF.EntityStats += LF.EntitiesCleared LF.EntityStats
 scoreboard players operation LF.TotalCleared SF.LagFixer += LF.Cleared SF.LagFixer
-### Clear HighScore Updater
+### Cleared HighScore
 execute if score LF.ItemsCleared LF.ItemStats > LF.MostCleared LF.ItemStats run scoreboard players operation LF.MostCleared LF.ItemStats = LF.ItemsCleared LF.ItemStats
 execute if score LF.EntitiesCleared LF.EntityStats > LF.MostCleared LF.EntityStats run scoreboard players operation LF.MostCleared LF.EntityStats = LF.EntitiesCleared LF.EntityStats
-### Average Updater
+### Average Cleared
 scoreboard players operation LF.AverageCleared LF.ItemStats = LF.TotalCleared LF.ItemStats
 scoreboard players operation LF.AverageCleared LF.ItemStats /= LF.TimesCleared SF.LagFixer
 scoreboard players operation LF.AverageCleared LF.EntityStats = LF.TotalCleared LF.EntityStats
