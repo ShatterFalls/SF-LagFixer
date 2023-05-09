@@ -1,6 +1,6 @@
 # Debugging Mode OFF
 ## Admin Team
-team leave @s[tag=Admin]
+team leave @s
 ## Disable Dubugger
 scoreboard players set #Debugger SF.LagFixer 0
 ## Clear Scoreboards

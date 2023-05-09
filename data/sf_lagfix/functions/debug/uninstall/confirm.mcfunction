@@ -12,6 +12,6 @@ scoreboard objectives remove LF.Entities1
 scoreboard objectives remove LF.Entities2
 scoreboard objectives remove LF.Entities3
 ## Display Uninstall Complete Prompt
-tellraw @s[tag=Admin] [{"text": "[","color": "gray"},{"text": "LF","color": "green","hoverEvent": {"action": "show_text","value": [{"text": "[","color": "gray"},{"text": "SF","color": "dark_purple"},{"text": "]","color": "gray"},{"text": "LagFixer","color": "gold"}]}},{"text": "] ","color": "gray"},{"text": "Uninstall Complete! This pack is safe to disable.","color": "gold"}]
+tellraw @s [{"text": "[","color": "gray"},{"text": "LF","color": "green","hoverEvent": {"action": "show_text","value": [{"text": "[","color": "gray"},{"text": "SF","color": "dark_purple"},{"text": "]","color": "gray"},{"text": "LagFixer","color": "gold"}]}},{"text": "] ","color": "gray"},{"text": "Uninstall Complete! This pack is safe to disable.","color": "gold"}]
 ## Restore CMD Feedback
 gamerule sendCommandFeedback true
