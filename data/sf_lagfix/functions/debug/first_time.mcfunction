@@ -22,6 +22,7 @@ scoreboard players add #SettingsPG SF.LagFixer 0
 scoreboard players add #StatsPG SF.LagFixer 0
 scoreboard players add #CMDFeedback SF.LagFixer 0
 scoreboard players add #Debugger SF.LagFixer 0
+scoreboard players add #MobAI SF.LagFixer 0
 scoreboard players add LF.TimesCleared SF.LagFixer 0
 scoreboard players add LF.AverageCleared SF.LagFixer 0
 scoreboard players add LF.MostCleared SF.LagFixer 0

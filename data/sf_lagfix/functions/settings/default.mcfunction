@@ -5,6 +5,7 @@ scoreboard players set #SettingsPG SF.LagFixer 1
 scoreboard players set #StatsPG SF.LagFixer 0
 scoreboard players set #CMDFeedback SF.LagFixer 1
 scoreboard players set #Debugger SF.LagFixer 0
+scoreboard players set #MobAI SF.LagFixer 1
 ## LF.Settings1
 scoreboard players set LF.TimerMax LF.Settings1 1800
 scoreboard players operation LF.TimerCurrent LF.Settings1 = LF.TimerMax LF.Settings1
