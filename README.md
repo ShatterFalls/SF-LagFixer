@@ -1,4 +1,4 @@
-# [​SF] LagFixer v1
+# [​SF] LagFixer v1.1.1
 
 [ShatterFalls] LagFixer is a datapack designed to do exactly what its name implies - fix lag. Developed from scratch by the team at [ShatterFalls], this pack is specifically created to reduce server-wide lag and stutter. LagFixer is able to target and remove the root causes of lag, providing a smoother and more enjoyable gameplay experience for all players. Additionally, we are constantly seeking feedback and suggestions from our community to improve and enhance the functionality of LagFixer. So if you’re tired of dealing with frustrating lag and stutter, give [ShatterFalls] LagFixer a try!
 
@@ -14,9 +14,6 @@ LagFixer has a built-in blacklist for items that should never be cleared. This i
 ## Why is this needed?
 Minecraft takes too long to remove items and entities on its own, often allowing thousands of items or entities to be loaded, with a good chunk of them being completely unnecessary. LagFixer steps in by giving the player control over when and what Minecraft should clear.
 
-## Notes:
-- Programed in 1.16.5 this does not check for any vanilla items from later versions
-
 ### What's included:
 - Item Clear
 - Entity Clear
@@ -24,14 +21,14 @@ Minecraft takes too long to remove items and entities on its own, often allowing
 - Customizable Player Proximity check
 - Entity toggle
 - Statistics Boards
-- Never Clear Item list with most Endgame Gear and Items
+- Item Blacklist with most Endgame Gear and Items
+- Updated Blacklist for 1.20, Improved code from [GenMode](https://modrinth.com/user/GenMode)
+- Setup Guide
+- AI Freezer
 
 ### Upcoming Features
-- Updated item list for 1.20
 - Customizable Emergency Clear
 - More Statistics
 - Improved Settings User Interface
-- Setup Guide
 - Overall Mob settings
-- AI Freezer
 - Collison Options (TEAM DRIVEN!!)
