@@ -4,7 +4,7 @@
   "predicate": {
     "equipment": {
       "head": {
-        "tag": "sf_lf:blacklist"
+        "items": "#sf_lf:blacklist"
       }
     }
   }
