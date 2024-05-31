@@ -1,9 +1,9 @@
 # Debugging Mode OFF
-## Admin Team
+# Admin Team
 team leave @s
-## Disable Dubugger
+# Disable Dubugger
 scoreboard players set #Debugger SF.LagFixer 0
-## Clear Scoreboards
+# Clear Scoreboards
 scoreboard objectives setdisplay sidebar.team.red
-## Reload Menu
+# Reload Menu
 function sf_lf:menu

@@ -1,5 +1,5 @@
 # Tick Functions
-## Timer warnings
+# Timer warnings
 execute if score LF.TimerCurrent LF.Settings1 matches 1800 run tellraw @a [{"text": "[","color": "gray"},{"text": "LF","color": "green","hoverEvent": {"action": "show_text","value": [{"text": "[","color": "gray"},{"text": "SF","color": "dark_purple"},{"text": "]","color": "gray"},{"text": "LagFixer - Menu","color": "gold"}]},"clickEvent": {"action": "run_command","value": "/function sf_lf:menu"}},{"text": "] ","color": "gray"},{"text": "Lag will be removed in 30 minutes!","color": "gold"}]
 execute if score LF.TimerCurrent LF.Settings1 matches 900 run tellraw @a [{"text": "[","color": "gray"},{"text": "LF","color": "green","hoverEvent": {"action": "show_text","value": [{"text": "[","color": "gray"},{"text": "SF","color": "dark_purple"},{"text": "]","color": "gray"},{"text": "LagFixer - Menu","color": "gold"}]},"clickEvent": {"action": "run_command","value": "/function sf_lf:menu"}},{"text": "] ","color": "gray"},{"text": "Lag will be removed in 15 minutes!","color": "gold"}]
 execute if score LF.TimerCurrent LF.Settings1 matches 300 run tellraw @a [{"text": "[","color": "gray"},{"text": "LF","color": "green","hoverEvent": {"action": "show_text","value": [{"text": "[","color": "gray"},{"text": "SF","color": "dark_purple"},{"text": "]","color": "gray"},{"text": "LagFixer - Menu","color": "gold"}]},"clickEvent": {"action": "run_command","value": "/function sf_lf:menu"}},{"text": "] ","color": "gray"},{"text": "Lag will be removed in 5 minutes!","color": "gold"}]
@@ -10,10 +10,9 @@ execute if score LF.TimerCurrent LF.Settings1 matches 4 run title @a actionbar [
 execute if score LF.TimerCurrent LF.Settings1 matches 3 run title @a actionbar [{"text": "[","color": "gray"},{"text": "LF","color": "green"},{"text": "] ","color": "gray"},{"text": "Clear in ","color": "gold"},{"text": "3..","color": "red"}]
 execute if score LF.TimerCurrent LF.Settings1 matches 2 run title @a actionbar [{"text": "[","color": "gray"},{"text": "LF","color": "green"},{"text": "] ","color": "gray"},{"text": "Clear in ","color": "gold"},{"text": "2..","color": "red"}]
 execute if score LF.TimerCurrent LF.Settings1 matches 1 run title @a actionbar [{"text": "[","color": "gray"},{"text": "LF","color": "green"},{"text": "] ","color": "gray"},{"text": "Clear in ","color": "gold"},{"text": "1..","color": "red"}]
-## Run Clear/Timer reset
+# Run Clear/Timer reset
 execute if score LF.TimerCurrent LF.Settings1 matches 0 run function sf_lf:clear
-execute if score LF.TimerCurrent LF.Settings1 matches 0 run scoreboard players operation LF.TimerCurrent LF.Settings1 = LF.TimerMax LF.Settings1
-## Countdown
+# Countdown
 scoreboard players remove LF.TimerCurrent LF.Settings1 1
-## Rescheduler
+# Rescheduler
 schedule function sf_lf:tick 1s

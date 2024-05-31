@@ -1,5 +1,5 @@
 # Switch to Item Statistics
-## Switch Page
+# Switch Page
 scoreboard players set #StatsPG SF.LagFixer 0
-## Reload Statistics Menu
+# Reload Statistics Menu
 function sf_lf:settings/statistics

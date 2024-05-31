@@ -1,4 +1,4 @@
-# 6 Line Spacing
+# 24 Line Spacing
 tellraw @s " "
 tellraw @s " "
 tellraw @s " "

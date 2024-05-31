@@ -1,8 +1,5 @@
-# ## Item Blacklist
-# #execute if score #Version SF.LagFixer matches 1165 run 
-# #execute if score #Version SF.LagFixer matches 1201 run 
-# ### Tools
-### Entities
+# Item Blacklist
+# Entities
 execute if score LF.ArmorStand LF.Entities1 matches 1 run tag @e[type=minecraft:armor_stand,tag=!LF.Pass] add LF.Delete
 execute if score LF.Arrow LF.Entities1 matches 1 run tag @e[type=minecraft:arrow,tag=!LF.Pass] add LF.Delete
 execute if score LF.Boat LF.Entities1 matches 1 run tag @e[type=minecraft:boat,tag=!LF.Pass] add LF.Delete

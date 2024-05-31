@@ -1,5 +1,5 @@
 # Switch to Entity Statistics
-## Switch Page
+# Switch Page
 scoreboard players set #StatsPG SF.LagFixer 2
-## Reload Statistics Menu
+# Reload Statistics Menu
 function sf_lf:settings/statistics

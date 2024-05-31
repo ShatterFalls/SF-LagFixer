@@ -1,5 +1,5 @@
 # Wither Skull Entity toggle
-## Toggle Entity
+# Toggle Entity
 scoreboard players set LF.WitherSkull LF.Entities3 0
-## Reload Entities Menu
+# Reload Entities Menu
 function sf_lf:settings/entities
