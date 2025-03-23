@@ -3,7 +3,7 @@
     playsound minecraft:block.stone_button.click_on master @s ~ ~ ~ .5
   # ===< Debugger Reseter >===
     team leave @s
-    scoreboard players set #Debugger SF.LagFixer 0
+    scoreboard players set Debugger SF.LagFixer 0
     scoreboard objectives setdisplay sidebar.team.red
   # ===< Scoreboard removal >===
     scoreboard objectives remove SF.LagFixer

@@ -1,4 +1,7 @@
 # ===< First Time Setup Part 2 >===
+  # ===< Admin Team init >===
+    team add Admin
+    team modify Admin color red
   # ===< Scoreboards >===
     scoreboard objectives add LF.ItemStats dummy
     scoreboard objectives add LF.EntityStats dummy
