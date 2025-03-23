@@ -17,4 +17,4 @@
       gamerule sendCommandFeedback
   # ===< Start Auto Setup >===
     execute if score #FirstTime SF.LagFixer matches 0 run \
-      function sf_lf:debug/user_setup/auto
+      function sf_lf:debug/first_time/auto

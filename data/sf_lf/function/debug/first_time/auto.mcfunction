@@ -62,8 +62,8 @@
       } \
     ]
   # ===< Tick init >===
-    function sf_lf:tick
-    function sf_lf:debug/ai/unfreeze_tick
+    # function sf_lf:tick
+    # function sf_lf:debug/ai/unfreeze_tick
     #function sf_lf:3s
   # ===< First Time Finish >===
     scoreboard players set #FirstTime SF.LagFixer 1
