@@ -3,6 +3,7 @@
     scoreboard players set LF.TimerMax LF.Settings1 1801
     scoreboard players operation LF.TimerCurrent LF.Settings1 = LF.TimerMax LF.Settings1
     scoreboard players set LF.PlayerProximity LF.Settings1 5
+    scoreboard players set LF.BlacklistOverride LF.Settings1 0
     #scoreboard players set LF.NoCollision LF.Settings1 1
   # ===< LF.Entities1 >===
     scoreboard players set LF.ArmorStand LF.Entities1 0

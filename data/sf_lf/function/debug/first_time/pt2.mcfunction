@@ -30,6 +30,7 @@
     scoreboard players add LF.TimerMax LF.Settings1 0
     scoreboard players add LF.TimerCurrent LF.Settings1 0
     scoreboard players add LF.PlayerProximity LF.Settings1 0
+    scoreboard players add LF.BlacklistOverride LF.Settings1 0
   # ===< LF.Entities1 Scoreboard Init >===
     scoreboard players add LF.ArmorStand LF.Entities1 0
     scoreboard players add LF.Arrow LF.Entities1 0
