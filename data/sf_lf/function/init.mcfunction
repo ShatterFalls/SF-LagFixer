@@ -2,7 +2,7 @@
   # ===< Scoreboards Init >===
     scoreboard objectives add SF.LagFixer dummy
   # ===< LagFixer Auto Setup >===
-    function sf_lf:debug/setup/init
+    function sf_lf:debug/setup/setup_init
   # ===< Load Notify >===
     tellraw @a [ \
         {"text": "[","color": "gray"}, \
