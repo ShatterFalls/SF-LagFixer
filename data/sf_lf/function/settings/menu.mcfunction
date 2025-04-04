@@ -1,0 +1,1 @@
+# ===< LagFixer Click Interact Chat Menu >===
