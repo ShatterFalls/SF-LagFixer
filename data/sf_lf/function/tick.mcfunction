@@ -1,153 +1,48 @@
-# ===< Tick Functions >===
-  # ===< Timer warnings >===
-    execute if score LF.TimerCurrent LF.Settings1 matches 1800 run \
-      tellraw @a [ \
-        {"text": "[","color": "gray"}, \
-        { \
-          "text": "LF", \
-          "color": "green", \
-          "hoverEvent": { \
-            "action": "show_text", \
-            "value": [ \
-              {"text": "[","color": "gray"}, \
-              {"text": "SF","color": "dark_purple"}, \
-              {"text": "]","color": "gray"}, \
-              {"text": "LagFixer - Menu","color": "gold"} \
-            ] \
-          }, \
-          "clickEvent": {"action": "run_command","value": "/function sf_lf:menu"} \
-        }, \
-        {"text": "] ","color": "gray"}, \
-        {"text": "Lag will be removed in 30 minutes!","color": "gold"} \
-      ]
-    execute if score LF.TimerCurrent LF.Settings1 matches 900 run \
-      tellraw @a [ \
-        {"text": "[","color": "gray"}, \
-        { \
-          "text": "LF", \
-          "color": "green", \
-          "hoverEvent": { \
-            "action": "show_text", \
-            "value": [ \
-              {"text": "[","color": "gray"}, \
-              {"text": "SF","color": "dark_purple"}, \
-              {"text": "]","color": "gray"}, \
-              {"text": "LagFixer - Menu","color": "gold"} \
-            ] \
-          }, \
-          "clickEvent": {"action": "run_command","value": "/function sf_lf:menu"} \
-        }, \
-        {"text": "] ","color": "gray"}, \
-        {"text": "Lag will be removed in 15 minutes!","color": "gold"} \
-      ]
-    execute if score LF.TimerCurrent LF.Settings1 matches 300 run \
-      tellraw @a [ \
-        {"text": "[","color": "gray"}, \
-        { \
-          "text": "LF", \
-          "color": "green", \
-          "hoverEvent": { \
-            "action": "show_text", \
-            "value": [ \
-              {"text": "[","color": "gray"}, \
-              {"text": "SF","color": "dark_purple"}, \
-              {"text": "]","color": "gray"}, \
-              {"text": "LagFixer - Menu","color": "gold"} \
-            ] \
-          }, \
-          "clickEvent": {"action": "run_command","value": "/function sf_lf:menu"} \
-        }, \
-        {"text": "] ","color": "gray"}, \
-        {"text": "Lag will be removed in 5 minutes!","color": "gold"} \
-      ]
-    execute if score LF.TimerCurrent LF.Settings1 matches 60 run \
-      tellraw @a [ \
-        {"text": "[","color": "gray"}, \
-        { \
-          "text": "LF", \
-          "color": "green", \
-          "hoverEvent": { \
-            "action": "show_text", \
-            "value": [ \
-              {"text": "[","color": "gray"}, \
-              {"text": "SF","color": "dark_purple"}, \
-              {"text": "]","color": "gray"}, \
-              {"text": "LagFixer - Menu","color": "gold"} \
-            ] \
-          }, \
-          "clickEvent": {"action": "run_command","value": "/function sf_lf:menu"} \
-        }, \
-        {"text": "] ","color": "gray"}, \
-        {"text": "Lag will be removed in ","color": "gold"}, \
-        {"text": "1 minute","color": "red"}, \
-        {"text": "!","color": "gold"} \
-      ]
-    execute if score LF.TimerCurrent LF.Settings1 matches 15 run \
-      tellraw @a [ \
-        {"text": "[","color": "gray"}, \
-        { \
-          "text": "LF", \
-          "color": "green", \
-          "hoverEvent": { \
-            "action": "show_text", \
-            "value": [ \
-              {"text": "[","color": "gray"}, \
-              {"text": "SF","color": "dark_purple"}, \
-              {"text": "]","color": "gray"}, \
-              {"text": "LagFixer - Menu","color": "gold"} \
-            ] \
-          }, \
-          "clickEvent": {"action": "run_command","value": "/function sf_lf:menu"} \
-        }, \
-        {"text": "] ","color": "gray"}, \
-        {"text": "Lag will be removed in ","color": "gold"}, \
-        {"text": "15 seconds","color": "red"}, \
-        {"text": "!","color": "gold"} \
-      ]
-    execute if score LF.TimerCurrent LF.Settings1 matches 5 run \
+# ===< LagFixer Ticking Functions >===
+  # ===< Countdown Notifications >===
+    execute if score S.ClearTimer LF.Settings matches 100 run \
       title @a actionbar [ \
-        {"text": "[","color": "gray"}, \
-        {"text": "LF","color": "green"}, \
-        {"text": "] ","color": "gray"}, \
-        {"text": "Clear in ","color": "gold"}, \
-        {"text": "5..","color": "red"} \
-      ]
-    execute if score LF.TimerCurrent LF.Settings1 matches 4 run \
+          {"text": "[","color": "gray"}, \
+          {"text": "LF","color": "green"}, \
+          {"text": "] ","color": "gray"}, \
+          {"text": "Clear in ","color": "gold"}, \
+          {"text": "5..","color": "red"} \
+        ]
+    execute if score S.ClearTimer LF.Settings matches 80 run \
       title @a actionbar [ \
-        {"text": "[","color": "gray"}, \
-        {"text": "LF","color": "green"}, \
-        {"text": "] ","color": "gray"}, \
-        {"text": "Clear in ","color": "gold"}, \
-        {"text": "4..","color": "red"} \
-      ]
-    execute if score LF.TimerCurrent LF.Settings1 matches 3 run \
+          {"text": "[","color": "gray"}, \
+          {"text": "LF","color": "green"}, \
+          {"text": "] ","color": "gray"}, \
+          {"text": "Clear in ","color": "gold"}, \
+          {"text": "4..","color": "red"} \
+        ]
+    execute if score S.ClearTimer LF.Settings matches 60 run \
       title @a actionbar [ \
-        {"text": "[","color": "gray"}, \
-        {"text": "LF","color": "green"}, \
-        {"text": "] ","color": "gray"}, \
-        {"text": "Clear in ","color": "gold"}, \
-        {"text": "3..","color": "red"} \
-      ]
-    execute if score LF.TimerCurrent LF.Settings1 matches 2 run \
+          {"text": "[","color": "gray"}, \
+          {"text": "LF","color": "green"}, \
+          {"text": "] ","color": "gray"}, \
+          {"text": "Clear in ","color": "gold"}, \
+          {"text": "3..","color": "red"} \
+        ]
+    execute if score S.ClearTimer LF.Settings matches 40 run \
       title @a actionbar [ \
-        {"text": "[","color": "gray"}, \
-        {"text": "LF","color": "green"}, \
-        {"text": "] ","color": "gray"}, \
-        {"text": "Clear in ","color": "gold"}, \
-        {"text": "2..","color": "red"} \
-      ]
-    execute if score LF.TimerCurrent LF.Settings1 matches 1 run \
+          {"text": "[","color": "gray"}, \
+          {"text": "LF","color": "green"}, \
+          {"text": "] ","color": "gray"}, \
+          {"text": "Clear in ","color": "gold"}, \
+          {"text": "2..","color": "red"} \
+        ]
+    execute if score S.ClearTimer LF.Settings matches 20 run \
       title @a actionbar [ \
-        {"text": "[","color": "gray"}, \
-        {"text": "LF","color": "green"}, \
-        {"text": "] ","color": "gray"}, \
-        {"text": "Clear in ","color": "gold"}, \
-        {"text": "1..","color": "red"} \
-      ]
-  # ===< Run Clear/Timer reset >===
-    execute if score LF.TimerCurrent LF.Settings1 matches 0 run \
+          {"text": "[","color": "gray"}, \
+          {"text": "LF","color": "green"}, \
+          {"text": "] ","color": "gray"}, \
+          {"text": "Clear in ","color": "gold"}, \
+          {"text": "1..","color": "red"} \
+        ]
+  # ===< Clear >===
+    execute if score S.ClearTimer LF.Settings matches 0 run \
       function sf_lf:clear
-  # ===< Countdown >===
-    scoreboard players remove LF.TimerCurrent LF.Settings1 1
-  # ===< Rescheduler >===
-    schedule function sf_lf:tick 1s
+  # ===< Timer Countdown >===
+    execute unless score S.ClearTimer LF.Settings matches 0 run \
+      scoreboard players remove S.ClearTimer LF.Settings 1

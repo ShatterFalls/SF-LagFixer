@@ -1,62 +1,12 @@
 # ===< Welcome to ShatterFalls LagFixer! >===
-  # ===< Scoreboard Init >===
+  # ===< Scoreboards Init >===
     scoreboard objectives add SF.LagFixer dummy
-  # ===< Scoreboard Scores Init >===
-    scoreboard players add CMDFeedback SF.LagFixer 0
-    scoreboard players add FirstTime SF.LagFixer 0
-  # ===< Scoreboard Default Scores >===
-    scoreboard players set CMDFeedback SF.LagFixer 1
-  # ===< CMD Feedback Init >===
-    gamerule sendCommandFeedback true
-    execute store result score CMDFeedback SF.LagFixer run \
-      gamerule sendCommandFeedback
-  # ===< First Time Init >===
-    execute if score FirstTime SF.LagFixer matches 0 run \
-      function sf_lf:debug/first_time/pt1
+  # ===< LagFixer Auto Setup >===
+    function sf_lf:debug/setup/init
   # ===< Load Notify >===
-    execute if score FirstTime SF.LagFixer matches 0 run \
-      say First Time failed(TEMP MESSAGE)
-    execute if score FirstTime SF.LagFixer matches 1 run \
-      tellraw @a [ \
-        { \
-          "text": "[", \
-          "color": "gray" \
-        }, \
-        { \
-          "text": "LF", \
-          "color": "green", \
-          "hoverEvent": { \
-            "action": "show_text", \
-            "value": [ \
-              { \
-                "text": "[", \
-                "color": "gray" \
-              }, \
-              { \
-                "text": "SF", \
-                "color": "dark_purple" \
-              }, \
-              { \
-                "text": "] ", \
-                "color": "gray" \
-              }, \
-              { \
-                "text": "LagFixer - Menu", \
-                "color": "gold" \
-              } \
-            ] \
-          }, \
-          "clickEvent": { \
-            "action": "run_command", \
-            "value": "/function sf_lf:menu" \
-          } \
-        }, \
-        { \
-          "text": "] ", \
-          "color": "gray" \
-        }, \
-        { \
-          "text": "LagFixer running!", \
-          "color": "gold" \
-        } \
+    tellraw @a [ \
+        {"text": "[","color": "gray"}, \
+        {"text": "LF","color": "green"}, \
+        {"text": "] ","color": "gray"}, \
+        {"text": "LagFixer Running!","color": "gold"} \
       ]
