@@ -10,4 +10,5 @@
           {"text": "Items Cleared!","color": "gold"} \
         ]
   # ===< Timer Reset >===
-    scoreboard players set hS.TrueTicks LF.Settings 200
+    scoreboard players operation hS.TrueTicks LF.Settings = S.TimerMax LF.Settings
+    scoreboard players operation hS.TrueTicks LF.Settings *= hS.TickConversion LF.Settings

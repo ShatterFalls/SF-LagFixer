@@ -1,5 +1,32 @@
 # ===< LagFixer 1 Second Ticking Functions >===
   # ===< Countdown Notifications >===
+    execute if score S.ClearTimer LF.Settings matches 30 run \
+      tellraw @a [ \
+          {"text": "[","color": "gray"}, \
+          {"text": "LF","color": "green"}, \
+          {"text": "] ","color": "gray"}, \
+          {"text": "LagFixer clear in ","color": "gold"}, \
+          {"text": "30 Seconds","color": "red"}, \
+          {"text": "!","color": "gold"} \
+        ]
+    execute if score S.ClearTimer LF.Settings matches 15 run \
+      tellraw @a [ \
+          {"text": "[","color": "gray"}, \
+          {"text": "LF","color": "green"}, \
+          {"text": "] ","color": "gray"}, \
+          {"text": "LagFixer clear in ","color": "gold"}, \
+          {"text": "15 Seconds","color": "red"}, \
+          {"text": "!","color": "gold"} \
+        ]
+    execute if score S.ClearTimer LF.Settings matches 10 run \
+      tellraw @a [ \
+          {"text": "[","color": "gray"}, \
+          {"text": "LF","color": "green"}, \
+          {"text": "] ","color": "gray"}, \
+          {"text": "LagFixer clear in ","color": "gold"}, \
+          {"text": "10 Seconds","color": "red"}, \
+          {"text": "!","color": "gold"} \
+        ]
     execute if score S.ClearTimer LF.Settings matches 5 run \
       title @a actionbar [ \
           {"text": "[","color": "gray"}, \
