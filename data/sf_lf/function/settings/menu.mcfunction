@@ -24,7 +24,18 @@
         }, \
         {"text": "] ","color": "gray"}, \
         {"text": "Settings--------------------------------------","color": "gold"} \
-      ]
+      ] 
+    tellraw @s [ \
+        { \
+          "text": "Display", \
+          "color": "dark_aqua", \
+          "hoverEvent": { \
+            "action": "show_text", \
+            "value": "LagFixer Display Settings" \
+          } \
+        }, \
+        { \
+        "text": }]
     tellraw @s [ \
         {"text": "[","color": "gray"}, \
         { \
